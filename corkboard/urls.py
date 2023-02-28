@@ -1,7 +1,11 @@
-from django.urls import path
-
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 from . import views
+from . import viewsets
 
+router = DefaultRouter()
+router.register('users', viewsets.UserViewSet)
 urlpatterns = [
-    path('latitude/<latitude>/longitude/<longitude>', views.index, name='index')
+    path('restaurants/latitude/<latitude>/longitude/<longitude>', views.index, name='index'),
+    path('', include(router.urls)),
 ]

@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('restaurants/', include('corkboard.urls')),
+    path('corkboard/', include('corkboard.urls')),
     path('admin/', admin.site.urls),
 ]
