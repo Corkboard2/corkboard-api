@@ -6,6 +6,6 @@ from . import viewsets
 router = DefaultRouter()
 router.register('users', viewsets.UserViewSet)
 urlpatterns = [
-    path('restaurants/latitude/<latitude>/longitude/<longitude>', views.index, name='index'),
+    path('restaurants/latitude/<latitude>/longitude/<longitude>/username/<username>', views.index, name='index'),
     path('', include(router.urls)),
 ]
