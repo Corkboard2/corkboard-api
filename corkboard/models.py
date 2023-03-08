@@ -12,7 +12,11 @@ class User(models.Model):
     third_dish = models.IntegerField()
     fourth_dish = models.IntegerField()
     fifth_dish = models.IntegerField()
-
+    food_list = [{'rating':first_dish, 'foods':['mexican','taco','bean','chile','burrito','asada','pastor']},
+                 {'rating':second_dish, 'foods':['italian','pasta','pizza']},
+                 {'rating':third_dish, 'foods':['american','burger','hot dog','steak','beer','wine']},
+                 {'rating':fourth_dish, 'foods':['japanese','sushi','ramen','teriyaki']},
+                 {'rating':fifth_dish, 'foods':['chinese','chowmein','dumplings','fried rice','noodles','duck']},]
     def __str__(self):
         return self.firs_name + self.last_name
 
